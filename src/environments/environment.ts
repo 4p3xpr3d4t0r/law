@@ -5,12 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyD2DUAGfR7iDRrwiDAqdL97GRiB0SwB5UY',
-    authDomain: 'agritec-4e9ac.firebaseapp.com',
-    databaseURL: 'https://agritec-4e9ac.firebaseio.com',
-    projectId: 'agritec-4e9ac',
-    storageBucket: 'agritec-4e9ac.appspot.com',
-    messagingSenderId: '609816478989'
+    apiKey: "AIzaSyBDgj9nWDpUbh5ToLh0TEpVljfFcT5qga0",
+    authDomain: "jurist-8b212.firebaseapp.com",
+    databaseURL: "https://jurist-8b212.firebaseio.com",
+    projectId: "jurist-8b212",
+    storageBucket: "jurist-8b212.appspot.com",
+    messagingSenderId: "796716473341",
+    appId: "1:796716473341:web:0d6939878573357a"
   }
 };
 
