@@ -36,7 +36,7 @@ export class SigninComponent implements OnInit {
 
   checkAuth() {
     if (this.auth.isUserLoggedIn) {
-      this.router.navigate(['/farmerpagedashboard']);
+      this.router.navigate(['/viewprofile']);
     }
   }
 
@@ -60,7 +60,7 @@ export class SigninComponent implements OnInit {
     this.loading = true;
     this.auth.login(this.loginForm.value.email, this.loginForm.value.password)
       .then((result) => {
-        this.router.navigate(['/farmerpagedashboard']);
+        this.router.navigate(['/viewprofile']);
       }).catch((err) => {
         this.error = err;
         this.loading = false;

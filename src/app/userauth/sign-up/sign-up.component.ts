@@ -50,7 +50,7 @@ export class SignUpComponent implements OnInit {
   }
 
         goAuth() {
-          this.router.navigate(['/auth']);
+          this.router.navigate(['/']);
         }
         goHome() {
           this.router.navigate(['/']);
