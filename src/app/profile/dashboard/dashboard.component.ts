@@ -13,8 +13,6 @@ export class DashboardComponent implements OnInit {
   searchBlogs = '';
   articles: object;
   blogs = [];
-  lat: number;
-  lon: number;
   public isLoggedIn: boolean;
   constructor(private posts: PostsService, private router: Router, public auth: AuthenticateService) {
   }
@@ -29,11 +27,27 @@ export class DashboardComponent implements OnInit {
         this.articles = data;
         const b = Object.keys(data).map(key => ({type: key, value: this.articles[key]}));
         this.blogs = b;
+        this.sortBy();
+console.log(data)
 
       });
     });
     this.isLoggedIn = this.auth.isUserLoggedIn;
   }
+  sortBy() {
+    this.blogs.sort((a: any, b: any) => {
+      let aa = new Date(a['value']["data"]["date"]); 
+      let bb = new Date(b['value']["data"]["date"]);
+        if (aa < bb) {
+            return 1;
+        } else if (aa > bb) {
+            return -1; 
+        } else {  
+            return 0;
+        }  
+    }); 
+    this.articles = this.blogs;
+}
 
   logout() {
     this.auth.logout();

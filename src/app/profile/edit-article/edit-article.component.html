@@ -3,9 +3,6 @@
       <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
               <div>
-                  <div class="register-left">
-                      <img height="100" width='100' src="/assets/logo/agro.png" alt="" />
-                  </div>
                   <h2 class="text-white">Edit your profile details</h2>
               </div>
          
@@ -63,15 +60,6 @@
                 <div *ngIf="f.phoneno.errors.required">Phone number is required</div>
             </div>
         </div>
-        <!--  -->
-      <div class="form-group">
-        <label for="select">Main role:</label>
-          <select id="select" class="form-control" formControlName="role">
-              <option>Admin</option>
-              <option>Lawyer</option>
-              <option>Client</option>
-          </select>
-      </div>
 
               <br><br>
         <button class="btn btn-primary" type="submit">Save</button>

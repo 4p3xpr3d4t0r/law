@@ -35,7 +35,7 @@ export class AddArticlesComponent implements OnInit {
   upload(event) {
     this.upldStatus = 'Uploading...';
     const randomId = Math.random().toString(36).substring(2);
-    this.ref = this.storage.ref('/post_images/' + randomId);
+    this.ref = this.storage.ref('/admin_images/' + randomId);
     this.task = this.ref.put(event.target.files[0]);
     this.uploadProgress = this.task.percentageChanges();
     this.task.snapshotChanges().pipe(
@@ -88,7 +88,7 @@ export class AddArticlesComponent implements OnInit {
         'about': [''],
         phoneno: ['',Validators.required],
         location: [''],
-        role: ['Farmer'],
+        role: ['Admin'],
       }
     );
 

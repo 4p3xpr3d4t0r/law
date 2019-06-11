@@ -29,6 +29,7 @@ export class ShowArticleComponent implements OnInit {
       this.posts.getUsers().subscribe(users => {
         data.user = users.find(u => u.uid === data.uid);
           this.article = data;
+          console.log(data)
       });
     });
   }
