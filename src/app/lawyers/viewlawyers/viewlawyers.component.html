@@ -1,0 +1,24 @@
+<table class="table table-sm">
+  <thead>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone no</th>
+    <th>Reference no</th>
+  </thead>
+<ng-container *ngFor="let Lawyers of lawyerArray">
+  <tr class="table-dark">
+    <td>{{Lawyers.first_name}}</td>
+    <td>{{Lawyers.last_name}}</td>
+    <td>{{Lawyers.email}}</td>
+    <td>{{Lawyers.phone_no}}</td>
+    <td>{{Lawyers.reference_no}}</td>
+    <td>
+      <button class="btn btn-outline-danger" (click)="onDelete(Lawyers.$key)">Delete</button>
+    </td>
+  </tr>
+</ng-container>
+</table>
+<div class="alert alert-danger" *ngIf="showDeletedMessage">
+Deleted successfully.
+</div>

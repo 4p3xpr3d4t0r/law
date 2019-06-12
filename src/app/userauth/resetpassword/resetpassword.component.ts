@@ -47,7 +47,7 @@ export class ResetpasswordComponent implements OnInit {
     } 
     
     if (this.auth.resetPassword(this.resetForm.value.email)){
-      this.router.navigate(['/auth']);
+      this.router.navigate(['/']);
     }
   
 }

@@ -15,6 +15,7 @@ import { Profileguard } from './userauth/signin/profile.guard';
 import { SignUpComponent } from './userauth/sign-up/sign-up.component';
 
 import { ResetpasswordComponent } from './userauth/resetpassword/resetpassword.component';
+import { ViewlawyersComponent } from './lawyers/viewlawyers/viewlawyers.component';
 
 
 
@@ -30,6 +31,8 @@ const routes: Routes = [
 
 
     { path: 'resetpassword', component: ResetpasswordComponent},
+
+    { path: 'viewlawyers', component: ViewlawyersComponent, canActivate: [AuthGuard] },
 
 ];
 

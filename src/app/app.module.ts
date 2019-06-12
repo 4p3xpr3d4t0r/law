@@ -32,6 +32,7 @@ import { ResetpasswordComponent } from './userauth/resetpassword/resetpassword.c
 
 
 import { SideiconsComponent } from './iconsfor/sideicons/sideicons.component';
+import { ViewlawyersComponent } from './lawyers/viewlawyers/viewlawyers.component';
 
 
 
@@ -48,6 +49,7 @@ import { SideiconsComponent } from './iconsfor/sideicons/sideicons.component';
     SignUpComponent,
     ResetpasswordComponent,
     SideiconsComponent,
+    ViewlawyersComponent,
    
     ],
   imports: [
