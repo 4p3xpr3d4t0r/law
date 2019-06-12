@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideiconsComponent } from './sideicons.component';
+import { ViewclientComponent } from './viewclient.component';
 
-describe('SideiconsComponent', () => {
-  let component: SideiconsComponent;
-  let fixture: ComponentFixture<SideiconsComponent>;
+describe('ViewclientComponent', () => {
+  let component: ViewclientComponent;
+  let fixture: ComponentFixture<ViewclientComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SideiconsComponent ]
+      declarations: [ ViewclientComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SideiconsComponent);
+    fixture = TestBed.createComponent(ViewclientComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,17 +4,17 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 @Injectable({
   providedIn: 'root'
 })
-export class LawyersService {
+export class ClientService {
 
   constructor( private firebase: AngularFireDatabase) { }
-  LawyersList: AngularFireList<any[]>;
+  ClientsList: AngularFireList<any[]>;
 
   getLawyers(){
-    this.LawyersList = this.firebase.list('Lawyers');
-    return this.LawyersList.snapshotChanges();
+    this.ClientsList = this.firebase.list('Clients');
+    return this.ClientsList.snapshotChanges();
   }
 
   deleteLawyer($key : string){
-    this.LawyersList.remove($key);
+    this.ClientsList.remove($key);
   }
 }

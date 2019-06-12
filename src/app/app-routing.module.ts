@@ -16,6 +16,7 @@ import { SignUpComponent } from './userauth/sign-up/sign-up.component';
 
 import { ResetpasswordComponent } from './userauth/resetpassword/resetpassword.component';
 import { ViewlawyersComponent } from './lawyers/viewlawyers/viewlawyers.component';
+import { ViewclientComponent } from './client/viewclient/viewclient.component';
 
 
 
@@ -33,6 +34,7 @@ const routes: Routes = [
     { path: 'resetpassword', component: ResetpasswordComponent},
 
     { path: 'viewlawyers', component: ViewlawyersComponent, canActivate: [AuthGuard] },
+    { path: 'viewclients', component: ViewclientComponent, canActivate: [AuthGuard] },
 
 ];
 

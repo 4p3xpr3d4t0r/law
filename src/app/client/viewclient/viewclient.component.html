@@ -10,15 +10,15 @@
     <th>Phone no</th>
     <th>Reference no</th>
   </thead>
-<ng-container *ngFor="let Lawyers of lawyerArray">
-  <tr class="table-dark" *ngIf="filterCondition(Lawyers)">
-    <td>{{Lawyers.first_name}}</td>
-    <td>{{Lawyers.last_name}}</td>
-    <td>{{Lawyers.email}}</td>
-    <td>{{Lawyers.phone_no}}</td>
-    <td>{{Lawyers.reference_no}}</td>
+<ng-container *ngFor="let Clients of clientArray">
+  <tr class="table-dark" *ngIf="filterCondition(Clients)">
+    <td>{{Clients.first_name}}</td>
+    <td>{{Clients.last_name}}</td>
+    <td>{{Clients.email}}</td>
+    <td>{{Clients.phone_no}}</td>
+    <td>{{Clients.reference_no}}</td>
     <td>
-      <button class="btn btn-outline-danger" (click)="onDelete(Lawyers.$key)">Delete</button>
+      <button class="btn btn-outline-danger" (click)="onDelete(Clients.$key)">Delete</button>
     </td>
   </tr>
 </ng-container>

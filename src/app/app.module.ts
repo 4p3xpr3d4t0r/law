@@ -31,8 +31,9 @@ import { SignUpComponent } from './userauth/sign-up/sign-up.component';
 import { ResetpasswordComponent } from './userauth/resetpassword/resetpassword.component';
 
 
-import { SideiconsComponent } from './iconsfor/sideicons/sideicons.component';
 import { ViewlawyersComponent } from './lawyers/viewlawyers/viewlawyers.component';
+import { ViewclientComponent } from './client/viewclient/viewclient.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -48,8 +49,9 @@ import { ViewlawyersComponent } from './lawyers/viewlawyers/viewlawyers.componen
     SigninComponent,
     SignUpComponent,
     ResetpasswordComponent,
-    SideiconsComponent,
     ViewlawyersComponent,
+    ViewclientComponent,
+    NavbarComponent,
    
     ],
   imports: [

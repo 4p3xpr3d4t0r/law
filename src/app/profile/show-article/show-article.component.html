@@ -76,7 +76,6 @@
   </section>
 </div>
 <div class="blog-btn-icons">
-<!-- <span class="edit-link pos-abs py-1 px-2" *ngIf="blog.data.uid == auth.currentUserId"><a href="/edit/{{blog.key}}">Edit</a></span> -->
   <div *ngIf="!auth.isUserLoggedIn" (click)="goAuth()" class="icon shadow bg-success d-flex justify-content-center align-items-center mb-2">
     <p class="d-inline-block h3" title="Login">
       <img src="assets/img/login-icon.png" />
@@ -91,6 +90,5 @@
     <p class="d-inline-block h3" title="Home">
       <img src="assets/img/home.png" />
     </p>
-    <!-- <a href="/edit/{{blog.key}}">Edit</a> -->
   </div>
 </div>

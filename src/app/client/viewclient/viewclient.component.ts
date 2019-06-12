@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { LawyersService } from '../lawyers.service';
+import { ClientService } from '../client.service';
 import { AuthenticateService } from '../../userauth/authenticate.service';
 
 @Component({
-  selector: 'app-viewlawyers',
-  templateUrl: './viewlawyers.component.html',
-  styleUrls: ['./viewlawyers.component.scss']
+  selector: 'app-viewclient',
+  templateUrl: './viewclient.component.html',
+  styleUrls: ['./viewclient.component.scss']
 })
-export class ViewlawyersComponent implements OnInit {
+export class ViewclientComponent implements OnInit {
 
-  constructor( public auth: AuthenticateService, private lawyersService: LawyersService ) { }
-  lawyerArray = [];
+  constructor( public auth: AuthenticateService, private clientService: ClientService ) { }
+  clientArray = [];
   showDeleteMessage: boolean;
   searchText: string ="";
 
 
   ngOnInit() {
-    this.lawyersService.getLawyers().subscribe(
+    this.clientService.getLawyers().subscribe(
       list => {
-        this.lawyerArray = list.map(item => {
+        this.clientArray = list.map(item => {
           return {
             $key: item.key,
             ...item.payload.val()
@@ -29,7 +29,7 @@ export class ViewlawyersComponent implements OnInit {
   }
 onDelete($key) {
    if (confirm('Are you sure to delete this lawyer?')){
-     this.lawyersService.deleteLawyer($key);
+     this.clientService.deleteLawyer($key);
      this.showDeleteMessage= true;
      setTimeout(() => this.showDeleteMessage = false, 3000);
    }

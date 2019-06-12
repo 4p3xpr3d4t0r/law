@@ -1,4 +1,5 @@
-.blog-btn-icons {
+  
+  .blog-btn-icons {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -21,3 +22,11 @@
       }
     }
   }
+  .register-left img {
+    margin-top: 18%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 1s infinite alternate;
+  }
+  
